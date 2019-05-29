@@ -1,4 +1,4 @@
-# intro-probabilistic-programming
+# Introduction to Probabilistic Programming
 Introduction to the concepts and tools behind probabilistic programming
 
 #### Topics
@@ -19,7 +19,20 @@ Introduction to the concepts and tools behind probabilistic programming
 
 #### Installation tips
 
-Convention: python3 `(3.6.8)`
+Convention: python3 `(3.6.8)` in my machine (mac), I think `3.7` should be fine. 
+You might want to build an independent python environment to avoid messing up 
+with your libraries.
+
+Dependencies listed within `requirements.txt`.
+
+Before following your instincts and make the call to
+```asciidoc
+pip install -r requirements.txt
+``` 
+There might be some potential issues at the `pyro-ppl` stage, considering
+it depends on pytorch. If this is the case take a look at the bottom
+to see the issue I experienced on my machine. If everything works fine, 
+congratulations.
 
 To install `statsmodels`
 ```asciidoc
@@ -44,7 +57,7 @@ pip install arviz
 ```
 To avoid a potential warning related to `theano` after calling pymc3
 ```asciidoc
-`conda install mkl-service`
+conda install mkl-service
 ```
 To install tensorflow, version `(1.13.1)` via
 `pip` although version `1.14.0rc0` and `2.0.0a0` also 
