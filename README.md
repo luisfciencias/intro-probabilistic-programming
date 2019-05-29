@@ -12,10 +12,10 @@ Introduction to the concepts and tools behind probabilistic programming
     * `pandas`
     * `scikit-learn`
   * Tools for probabilistic programming
-    * `statsmodels`
-    * `pymc3`
-    * `pyro`
-    * `tensorflow-probability`
+    * `statsmodels` -->  (https://www.statsmodels.org)
+    * `pymc3`--> (https://docs.pymc.io)
+    * `pyro`--> (http://pyro.ai)
+    * `tensorflow-probability` --> (https://www.tensorflow.org/probability)
 
 #### Installation tips
 
@@ -88,7 +88,6 @@ If you get an error in the lines of
 ... ***.dylib
 ...
 Reason: image not found
-the following might solve it
 ```
 The following might solve it
 ```asciidoc
