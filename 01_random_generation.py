@@ -14,15 +14,15 @@ gaussian_sample = random_state.normal(loc=0, scale=2, size=number_samples)
 x = np.linspace(-5, 5, 100)
 y = norm(loc=0, scale=2)
 
-plt.xkcd()
-plt.figure(figsize=(8, 6))
-plt.hist(gaussian_sample, bins=10, histtype='step', density=True)
-plt.plot(x, y.pdf(x))
-plt.title(r'$\mu = {} \quad \sigma = {}$'.format(0, 2))
-plt.xlabel(r'$X$')
-plt.ylabel(r'$P(X)$')
-plt.savefig('random_samples.png', dpi=128)
-plt.close()
+with plt.xkcd():
+    plt.figure(figsize=(8, 6))
+    plt.hist(gaussian_sample, bins=10, histtype='step', density=True)
+    plt.plot(x, y.pdf(x))
+    plt.title(r'$\mu = {} \quad \sigma = {}$'.format(0, 2))
+    plt.xlabel(r'$X$')
+    plt.ylabel(r'$P(X)$')
+    plt.savefig('random_samples.png', dpi=128)
+    plt.close()
 
 
 # Method 2: Inverse transform method
@@ -76,5 +76,5 @@ with plt.xkcd():
     plt.plot(x, exponential_pdf(x), linewidth=2)
     plt.axis([0, 4, 0, 1])
     plt.title('Histogram of exponential PRNGs')
-plt.savefig('random_inverse_transform.png', dpi=128)
-plt.close()
+    plt.savefig('random_inverse_transform.png', dpi=128)
+    plt.close()
