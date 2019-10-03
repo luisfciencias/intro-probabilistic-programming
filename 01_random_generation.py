@@ -11,8 +11,8 @@ number_samples = 1000
 gaussian_sample = random_state.normal(loc=0, scale=2, size=number_samples)
 
 # ground truth gaussian
-x = np.linspace(-5, 5, 100)
 y = norm(loc=0, scale=2)
+x = np.linspace(y.ppf([0.01])[0], y.ppf([0.99])[0], 100)
 
 with plt.xkcd():
     plt.figure(figsize=(8, 6))
