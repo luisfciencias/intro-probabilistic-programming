@@ -14,15 +14,15 @@ gaussian_sample = random_state.normal(loc=0, scale=2, size=number_samples)
 x = np.linspace(-5, 5, 100)
 y = norm(loc=0, scale=2)
 
-with plt.xkcd():
-    plt.figure(figsize=(8, 6))
-    plt.hist(gaussian_sample, bins=10, histtype='step', density=True)
-    plt.plot(x, y.pdf(x))
-    plt.title(r'$\mu = {} \quad \sigma = {}$'.format(0, 2))
-    plt.xlabel(r'$X$')
-    plt.ylabel(r'$P(X)$')
-    plt.savefig('random_samples.png', dpi=128)
-    plt.close()
+plt.xkcd()
+plt.figure(figsize=(8, 6))
+plt.hist(gaussian_sample, bins=10, histtype='step', density=True)
+plt.plot(x, y.pdf(x))
+plt.title(r'$\mu = {} \quad \sigma = {}$'.format(0, 2))
+plt.xlabel(r'$X$')
+plt.ylabel(r'$P(X)$')
+plt.savefig('random_samples.png', dpi=128)
+plt.close()
 
 
 # Method 2: Inverse transform method
